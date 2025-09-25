@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Opdracht 3.2</title>
+</head>
+<body>
+    <form action="/boekingen" method="post">
+  <h2>Boekingsformulier</h2>
+
+  <label>Voornaam:
+    <input type="text" name="voornaam" pattern="[A-Za-z]+" required>
+  </label><br>
+
+  <label>Achternaam:
+    <input type="text" name="achternaam" pattern="[A-Za-z]+" required>
+  </label><br>
+
+  <label>Geslacht:
+    <input type="radio" name="geslacht" value="man" checked> Man
+    <input type="radio" name="geslacht" value="vrouw"> Vrouw
+  </label><br>
+
+  <label>Straat + huisnummer:
+    <input type="text" name="straat" required>
+  </label><br>
+
+  <label>Postcode:
+    <input type="text" name="postcode" required>
+  </label><br>
+
+  <label>Stad:
+    <input type="text" name="stad" required>
+  </label><br>
+
+  <label>Land:
+    <input type="text" name="land" required>
+  </label><br>
+
+  <label>BSN-nummer:
+    <input type="text" name="bsn" pattern="[0-9]{1,9}" maxlength="9" required>
+  </label><br>
+
+
+  <label>Vakantieland:
+    <input type="text" name="vakantieland" list="landen" required>
+    <datalist id="landen">
+      <option value="Spanje">
+      <option value="Italië">
+      <option value="Turkije">
+      <option value="Griekenland">
+      <option value="Frankrijk">
+    </datalist>
+  </label><br>
+
+  <label>Datum van vertrek:
+    <input type="date" name="vertrek" min="<?php echo date('Y-m-d'); ?>" required>
+  </label><br>
+
+  <label>Datum van terugkomst:
+    <input type="date" name="terugkomst" required>
+  </label><br>
+
+  <label>Aantal reisgenoten (max 4):
+    <input type="text" name="reisgenoten" pattern="[0-4]" required>
+  </label><br>
+
+  <label>E-mail:
+    <input type="email" name="email" required>
+  </label><br>
+
+  <label>Wachtwoord:
+    <input type="password" name="wachtwoord" required>
+  </label><br>
+
+  <label>Geboortemaand:
+    <input type="month" name="geboortemaand" required>
+  </label><br>
+
+
+  <input type="submit" value="Boek nu">
+</form>
+
+    
+</body>
+</html>
