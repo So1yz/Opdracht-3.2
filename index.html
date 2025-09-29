@@ -3,85 +3,82 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Opdracht 3.2</title>
+    <title>Document</title>
 </head>
 <body>
-    <form action="/boekingen" method="post">
-  <h2>Boekingsformulier</h2>
+    <form action="" method="post">
+        Voornaam: 
+        <input type="text" pattern="[A-Z a-z]*" required placeholder="Vul uw naam in">
 
-  <label>Voornaam:
-    <input type="text" name="voornaam" pattern="[A-Za-z]+" required>
-  </label><br>
+        <br>
+        
+        Achternaam:
+        <input type="text" pattern="[A-Z a-z]*" required placeholder="Vul uw achternaam in">
+        <br>
 
-  <label>Achternaam:
-    <input type="text" name="achternaam" pattern="[A-Za-z]+" required>
-  </label><br>
+        Wachtwoord:
+        <input type="password" pattern="[A-Z a-z 0-9]*" required placeholder="Vul uw wachtwoord in">
+        <br>
 
-  <label>Geslacht:
-    <input type="radio" name="geslacht" value="man" checked> Man
-    <input type="radio" name="geslacht" value="vrouw"> Vrouw
-  </label><br>
+        E-mail:
+        <input type="email" required placeholder="Vul uw e-mail in">
+        <br>
 
-  <label>Straat + huisnummer:
-    <input type="text" name="straat" required>
-  </label><br>
+        Geslacht:
+        <input type="radio"  id="man" name="geslacht" value="Man" checked>
+        <label for="man">Man</label>
+        <input type="radio" id="vrouw" name="geslacht" value="Vrouw">
+        <label for="vrouw">Vrouw</label>
+        <br>
 
-  <label>Postcode:
-    <input type="text" name="postcode" required>
-  </label><br>
+        Straat + huisnummer:
+        <input type="text" pattern="[A-Z a-z 0-9]*" required placeholder="Vul uw address in">
+        <br>
 
-  <label>Stad:
-    <input type="text" name="stad" required>
-  </label><br>
+        Postcode:
+        <input type="text" pattern="[0-9]{4}[A-Z a-z]{3}" required placeholder="Vul uw postcode in">
+        <br>
+        
+        Stad:
+        <input type="text" pattern="[A-Z a-z]*" required placeholder="Vul uw stad in">
+        <br>
 
-  <label>Land:
-    <input type="text" name="land" required>
-  </label><br>
-
-  <label>BSN-nummer:
-    <input type="text" name="bsn" pattern="[0-9]{1,9}" maxlength="9" required>
-  </label><br>
-
-
-  <label>Vakantieland:
-    <input type="text" name="vakantieland" list="landen" required>
-    <datalist id="landen">
-      <option value="Spanje">
-      <option value="Italië">
-      <option value="Turkije">
-      <option value="Griekenland">
-      <option value="Frankrijk">
-    </datalist>
-  </label><br>
-
-  <label>Datum van vertrek:
-    <input type="date" name="vertrek" min="<?php echo date('Y-m-d'); ?>" required>
-  </label><br>
-
-  <label>Datum van terugkomst:
-    <input type="date" name="terugkomst" required>
-  </label><br>
-
-  <label>Aantal reisgenoten (max 4):
-    <input type="text" name="reisgenoten" pattern="[0-4]" required>
-  </label><br>
-
-  <label>E-mail:
-    <input type="email" name="email" required>
-  </label><br>
-
-  <label>Wachtwoord:
-    <input type="password" name="wachtwoord" required>
-  </label><br>
-
-  <label>Geboortemaand:
-    <input type="month" name="geboortemaand" required>
-  </label><br>
-
-
-  <input type="submit" value="Boek nu">
-</form>
+        BSN-nummer:
+        <input type="text" pattern="[0-9]{9}" required placeholder="Vul uw BSN-nummer in">
+        <br>
 
     
+        Kies een vakantieland:
+        <select name="vakantieland" id="vakantieland">
+            <option value="Kies een land" selected disabled>Kies een land</option>
+            <option value="Spanje">Spanje</option>
+            <option value="Frankrijk">Frankrijk</option>
+            <option value="Italië">Italië</option>
+            <option value="Griekenland">Griekenland</option>
+            <option value="Portugal">Portugal</option>
+        </select>
+        <br>
+
+        
+        Datum van vertrek:
+        <input type="date" name="vertrekdatum" min="2025-29-09" required>
+        <br>
+
+        Datum van terugkomst:
+        <input type="date" name="terugkomstdatum" required>
+        <br>
+
+        Aantal reisgenoten:
+        <input type="number" name="aantal" min="0" max="4" required>
+        <br>
+
+        <input type="submit" value="Boek nu">
+
+
+
+
+
+
+    </form>
 </body>
 </html>
